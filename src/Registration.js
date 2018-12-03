@@ -3,7 +3,7 @@ import React from 'react';
 class Registration extends React.Component{
 	constructor(){
 		super();
-		this.state ={users: []};
+		this.state ={users: ''};
 	}
 	
 

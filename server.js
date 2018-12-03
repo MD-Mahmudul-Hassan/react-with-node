@@ -1,16 +1,24 @@
 var express = require('express');
+const bodyParser = require('body-parser');
 
 var app = express();
 
-app.get('/api', function(req, res){
-    res.send("Node server is running");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api', (req, res) => {
+    res.json([{id : 10,  greeting : 'Hello From Express'}]);
+
 });
 
 app.post('/api/add-user', (req, res) => {
-    console.log(req.body);
-    res.send(
-      `I received your POST request. This is what you sent me: ${req.body.post}`,
-    );
+    if (req.body.email != 'm.hassan@sjinnovation' && req.body.password != '123') {
+        res.send("Invalid credentials. Please try again.");
+    } else {
+        res.send("Login successfull!");
+    }
+
+
 });
 
 
