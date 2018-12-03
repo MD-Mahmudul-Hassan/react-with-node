@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Link} from "react-router-dom";
 import Login from "./Login";
 import Registration from "./Registration";
 import Home from "./Home";
+import Dashboard from "./Dashboard";
 
 class Header extends React.Component{
   render() {
@@ -22,13 +23,17 @@ class Header extends React.Component{
                 <li className="nav-item text-right">
                   <Link className="nav-link" to="/login">Login</Link>
                 </li>
+                <li className="nav-item text-right">
+                  <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                </li>
               </ul>
             </div>          
             </div>
           <div>
             <Route exact path="/" component={Home} /> 
             <Route path="/login" component={Login} />          
-            <Route path="/registration" component={Registration} />            
+            <Route path="/registration" component={Registration} />
+            <Route path="/dashboard" component={Dashboard} />
           </div>
 
         </div>

@@ -15,7 +15,8 @@ app.post('/api/add-user', (req, res) => {
     if (req.body.email != 'm.hassan@sjinnovation' && req.body.password != '123') {
         res.send("Invalid credentials. Please try again.");
     } else {
-        res.send("Login successfull!");
+        res.send(true);
+        //res.send("Login successfull!");
     }
 
 

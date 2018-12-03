@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom'
 
 class Login extends React.Component{
 
@@ -7,7 +8,8 @@ class Login extends React.Component{
 		this.state = { 
 			responseToPost : '',			
 			email : '',
-			password : ''
+			password : '',
+			redirect : false
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -22,9 +24,12 @@ class Login extends React.Component{
 		  },
 		  body: JSON.stringify({ email: this.state.email, password: this.state.password}),
 		});
-		const body = await response.text();		
+		const body = await response.text();
 		this.setState({ responseToPost: body });
 	};
+
+	
+
 
 	render(){
 		return (
