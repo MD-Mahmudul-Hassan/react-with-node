@@ -5,11 +5,11 @@
   "proxy": "http://localhost:5000/",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "bootstrap": "^4.1.1",
-    "express": "^4.16.4",
     "jquery": "^3.3.1",
     "nodemon": "^1.18.5",
     "popper.js": "^1.14.3",
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router": "^4.3.1",
