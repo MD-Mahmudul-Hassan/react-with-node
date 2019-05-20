@@ -17,7 +17,7 @@ class Login extends React.Component{
 	handleSubmit = async event => {
 		event.preventDefault();
 		const data = new FormData(event.target);
-		const response = await fetch('/api/add-user', {
+		const response = await fetch('/api/login', {
 		  method: 'POST',
 		  headers: {
 			'Content-Type': 'application/json',
